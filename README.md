@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# Ignite Timer ⏱️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Capa do Projeto](/timer-screenshot.png) *(Exemplo: Interface do Ignite Timer)*
 
-Currently, two official plugins are available:
+## ℹ️ Sobre o Projeto
+Aplicação de gerenciamento de tempo baseada na técnica Pomodoro, desenvolvida com React + TypeScript durante o bootcamp Ignite da Rocketseat.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades Principais
+- **⏳ Timer Pomodoro** 
+  - Ciclos personalizáveis
+- **📊 Histórico Persistente**
+  - Armazenamento em `localStorage` (sobrevive ao refresh)
+- **🔄 Gerenciamento de Estados Complexos**
+  - Zustand/Immer para gestão de estado
+  - Formulários com React Hook Form + Zod
+- **🎨 UI Avançada**
+  - Styled Components
+  - Ícones Phosphor
 
-## Expanding the ESLint configuration
+## 🛠️ Stack Tecnológica
+### Core
+- ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+- ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Bibliotecas Chave
+| Biblioteca | Versão 
+|------------|--------
+| `date-fns` | ^4.1.0 
+| `immer`    | ^10.1.1 
+| `react-hook-form` | ^7.55.0 
+| `zod`      | ^3.24.2 
+| `styled-components` | ^6.1.13 
 
-- Configure the top-level `parserOptions` property like this:
+## 🚀 Executando o Projeto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Pré-requisitos
+- Node.js 18+
+- npm 9+ ou yarn 1.22+
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Instalação
+```bash
+git clone https://github.com/agadelhaa/ignite-timer.git
+cd ignite-timer
+npm install
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Feito com 💜 por Amanda Gadelha
