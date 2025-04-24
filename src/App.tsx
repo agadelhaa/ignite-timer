@@ -8,11 +8,11 @@ import { CycleContextProvider } from './contexts/CyclesContext';
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         <CycleContextProvider>
           <Router />
         </CycleContextProvider>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
       <GlobalStyle />
     </ThemeProvider>
   );
